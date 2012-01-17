@@ -15,6 +15,7 @@
 		C9D85E0A14C6287C007DCB34 /* OTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D85E0914C6287C007DCB34 /* OTAppDelegate.m */; };
 		C9D85E1714C62A3B007DCB34 /* ArduinoConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D85E1614C62A3B007DCB34 /* ArduinoConnection.m */; };
 		C9D85E1A14C6334F007DCB34 /* ArduinoNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D85E1914C6334F007DCB34 /* ArduinoNetworkHandler.m */; };
+		C9D85E1D14C639E5007DCB34 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D85E1C14C639E5007DCB34 /* DebugViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		C9D85E1614C62A3B007DCB34 /* ArduinoConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArduinoConnection.m; sourceTree = "<group>"; };
 		C9D85E1814C6334F007DCB34 /* ArduinoNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArduinoNetworkHandler.h; sourceTree = "<group>"; };
 		C9D85E1914C6334F007DCB34 /* ArduinoNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArduinoNetworkHandler.m; sourceTree = "<group>"; };
+		C9D85E1B14C639E5007DCB34 /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
+		C9D85E1C14C639E5007DCB34 /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 		C9D85E1014C628B4007DCB34 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C9D85E1B14C639E5007DCB34 /* DebugViewController.h */,
+				C9D85E1C14C639E5007DCB34 /* DebugViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				C9D85E0A14C6287C007DCB34 /* OTAppDelegate.m in Sources */,
 				C9D85E1714C62A3B007DCB34 /* ArduinoConnection.m in Sources */,
 				C9D85E1A14C6334F007DCB34 /* ArduinoNetworkHandler.m in Sources */,
+				C9D85E1D14C639E5007DCB34 /* DebugViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

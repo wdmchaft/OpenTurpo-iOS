@@ -17,6 +17,11 @@
 
 @property (retain) ArduinoConnection *arduinoConnection;
 
+/**
+ * Initializes network handler with an existing connection
+ * @connection - the existing connection to be used
+ **/
 - (id) initWithConnection:(ArduinoConnection*) connection;
+
 
 @end

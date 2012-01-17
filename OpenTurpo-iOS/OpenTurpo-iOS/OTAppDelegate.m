@@ -8,6 +8,8 @@
 
 #import "OTAppDelegate.h"
 
+#import "DebugViewController.h"
+
 @implementation OTAppDelegate
 
 @synthesize window = _window;
@@ -24,6 +26,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    DebugViewController *debugViewController = [[DebugViewController alloc] initWithNibName:nil bundle:nil];
+    
+    self.window.rootViewController = debugViewController;
+    
+    [debugViewController release];
+    
     return YES;
 }
 
