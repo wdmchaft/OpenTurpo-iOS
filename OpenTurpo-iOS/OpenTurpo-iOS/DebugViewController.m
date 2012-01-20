@@ -8,6 +8,12 @@
 
 #import "DebugViewController.h"
 
+@interface DebugViewController ()
+
+- (void) insertLabelWithText:(NSString*)text andWithFrame:(CGRect) frame;
+
+@end
+
 @implementation DebugViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -59,87 +65,15 @@
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
      
-    UILabel *rpmLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 25, 300, 20)];
-    
-    rpmLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    rpmLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    rpmLabel.textColor = [UIColor blackColor];
-    rpmLabel.text = @"RPM: ";
-    
-    [self.view addSubview:rpmLabel];
-    [rpmLabel release];
-    
-    UILabel *lambdaLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 55, 300, 20)];
-    lambdaLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    lambdaLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    lambdaLabel.textColor = [UIColor blackColor];
-    lambdaLabel.text = @"Lamda: ";
-
-    [self.view addSubview:lambdaLabel];
-    [lambdaLabel release];
-    
-    UILabel *fuelPumpRelayLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 85, 300, 20)];
-    fuelPumpRelayLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    fuelPumpRelayLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    fuelPumpRelayLabel.textColor = [UIColor blackColor];
-    fuelPumpRelayLabel.text = @"Fuel pump relay: ";
-    
-    [self.view addSubview:fuelPumpRelayLabel];
-    [fuelPumpRelayLabel release];
-    
-    UILabel *airMassMeterLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 115, 300, 20)];
-    airMassMeterLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    airMassMeterLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    airMassMeterLabel.textColor = [UIColor blackColor];
-    airMassMeterLabel.text = @"Air Mass Meter: ";
-    
-    [self.view addSubview:airMassMeterLabel];
-    [airMassMeterLabel release];
-    
-    UILabel *airMassMeterTemperatureLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 145, 300, 20)];
-    airMassMeterTemperatureLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    airMassMeterTemperatureLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    airMassMeterTemperatureLabel.textColor = [UIColor blackColor];
-    airMassMeterTemperatureLabel.text = @"Air Mass Meter Temperature: ";
-    
-    [self.view addSubview:airMassMeterTemperatureLabel];
-    [airMassMeterTemperatureLabel release];
-    
-    UILabel *engineTemperatureLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 175, 300, 20)];
-    engineTemperatureLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    engineTemperatureLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    engineTemperatureLabel.textColor = [UIColor blackColor];
-    engineTemperatureLabel.text = @"Engine Temperature: ";
-    
-    [self.view addSubview:engineTemperatureLabel];
-    [engineTemperatureLabel release];
-    
-    UILabel *injectorRelayLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 205, 300, 20)];
-    injectorRelayLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    injectorRelayLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    injectorRelayLabel.textColor = [UIColor blackColor];
-    injectorRelayLabel.text = @"Injector Relay: ";
-    
-    [self.view addSubview:injectorRelayLabel];
-    [injectorRelayLabel release];
-    
-    UILabel *dmeRelayLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 235, 300, 20)];
-    dmeRelayLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    dmeRelayLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    dmeRelayLabel.textColor = [UIColor blackColor];
-    dmeRelayLabel.text = @"DME Relay: ";
-    
-    [self.view addSubview:dmeRelayLabel];
-    [dmeRelayLabel release];
-    
-    UILabel *fuelConsumptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 265, 300, 20)];
-    fuelConsumptionLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
-    fuelConsumptionLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    fuelConsumptionLabel.textColor = [UIColor blackColor];
-    fuelConsumptionLabel.text = @"Fuel Consumption";
-    
-    [self.view addSubview:fuelConsumptionLabel];
-    [fuelConsumptionLabel release];
+    [self insertLabelWithText:@"RPM: " andWithFrame:CGRectMake(15, 25, 300, 20)];
+    [self insertLabelWithText:@"Lamda: " andWithFrame:CGRectMake(15, 55, 300, 20)];
+    [self insertLabelWithText:@"Fuel Pump Relay: " andWithFrame:CGRectMake(15, 85, 300, 20)];
+    [self insertLabelWithText:@"Air Mass Meter" andWithFrame:CGRectMake(15, 115, 300, 20)];
+    [self insertLabelWithText:@"Air Mass Meter Temperature: " andWithFrame:CGRectMake(15, 145, 300, 20)];
+    [self insertLabelWithText:@"Engine Temperature: " andWithFrame:CGRectMake(15, 175, 300, 20)];
+    [self insertLabelWithText:@"Injector Relay: " andWithFrame:CGRectMake(15, 205, 300, 20)];
+    [self insertLabelWithText:@"DME Relay" andWithFrame:CGRectMake(15, 235, 300, 20)];
+    [self insertLabelWithText:@"Fuel Consumption: " andWithFrame:CGRectMake(15, 265, 300, 20)];
     
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 768, 44)];
     
@@ -184,6 +118,20 @@
 {
     // Return YES for supported orientations
 	return YES;
+}
+
+#pragma mark Private functions
+- (void) insertLabelWithText:(NSString*)text andWithFrame:(CGRect)frame
+{
+    UILabel *textLabel = [[UILabel alloc] initWithFrame:frame];
+    textLabel.font = [UIFont fontWithName:@"Helvetica" size:20.0];
+    textLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
+    textLabel.textColor = [UIColor blackColor];
+    textLabel.text = text;
+    
+    [self.view addSubview:textLabel];
+    [textLabel release];
+
 }
 
 @end
