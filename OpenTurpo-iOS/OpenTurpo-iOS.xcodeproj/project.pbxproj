@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91DCD4E14D1DB7A00AD922D /* OTDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD4D14D1DB7A00AD922D /* OTDashboardViewController.m */; };
+		C91DCD5414D1DFDA00AD922D /* OTSpeedoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD5314D1DFDA00AD922D /* OTSpeedoViewController.m */; };
 		C9D85DFA14C6287C007DCB34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DF914C6287C007DCB34 /* UIKit.framework */; };
 		C9D85DFC14C6287C007DCB34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFB14C6287C007DCB34 /* Foundation.framework */; };
 		C9D85DFE14C6287C007DCB34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFD14C6287C007DCB34 /* CoreGraphics.framework */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C91DCD4C14D1DB7A00AD922D /* OTDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTDashboardViewController.h; sourceTree = "<group>"; };
+		C91DCD4D14D1DB7A00AD922D /* OTDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTDashboardViewController.m; sourceTree = "<group>"; };
+		C91DCD5214D1DFDA00AD922D /* OTSpeedoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTSpeedoViewController.h; sourceTree = "<group>"; };
+		C91DCD5314D1DFDA00AD922D /* OTSpeedoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSpeedoViewController.m; sourceTree = "<group>"; };
 		C9D85DF514C6287C007DCB34 /* OpenTurpo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenTurpo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D85DF914C6287C007DCB34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9D85DFB14C6287C007DCB34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +115,10 @@
 			children = (
 				C9D85E1B14C639E5007DCB34 /* DebugViewController.h */,
 				C9D85E1C14C639E5007DCB34 /* DebugViewController.m */,
+				C91DCD4C14D1DB7A00AD922D /* OTDashboardViewController.h */,
+				C91DCD4D14D1DB7A00AD922D /* OTDashboardViewController.m */,
+				C91DCD5214D1DFDA00AD922D /* OTSpeedoViewController.h */,
+				C91DCD5314D1DFDA00AD922D /* OTSpeedoViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +215,8 @@
 				C9D85E1714C62A3B007DCB34 /* ArduinoConnection.m in Sources */,
 				C9D85E1A14C6334F007DCB34 /* ArduinoNetworkHandler.m in Sources */,
 				C9D85E1D14C639E5007DCB34 /* DebugViewController.m in Sources */,
+				C91DCD4E14D1DB7A00AD922D /* OTDashboardViewController.m in Sources */,
+				C91DCD5414D1DFDA00AD922D /* OTSpeedoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +320,7 @@
 				C9D85E0F14C6287C007DCB34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

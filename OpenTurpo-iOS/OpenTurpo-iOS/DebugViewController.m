@@ -48,20 +48,6 @@
     [super viewDidLoad];
     
     self.title = @"TURPÅÅÅÅH";
-    /*
-     ALL =             'a',
-     LAMBDA =          'b',
-     FUEL_PUMP_RELAY = 'c',
-     AMM =             'd',
-     AMM_TEMP =        'e',
-     ENGINE_TEMP =     'f',
-     INJECTOR_RELAY =  'g',
-     DME_RELAY =       'h',
-     RPM =             'i',
-     FUEL_CONSUMPTION = 'j',
-     FAN_LO =          'k',
-     FAN_HI =          'l'
-*/
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
      
@@ -74,6 +60,7 @@
     [self insertLabelWithText:@"Injector Relay: " andWithFrame:CGRectMake(15, 205, 300, 20)];
     [self insertLabelWithText:@"DME Relay" andWithFrame:CGRectMake(15, 235, 300, 20)];
     [self insertLabelWithText:@"Fuel Consumption: " andWithFrame:CGRectMake(15, 265, 300, 20)];
+    
     
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 768, 44)];
     

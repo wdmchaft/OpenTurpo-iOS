@@ -8,7 +8,7 @@
 
 #import "OTAppDelegate.h"
 
-#import "DebugViewController.h"
+#import "OTDashboardViewController.h"
 
 @implementation OTAppDelegate
 
@@ -27,11 +27,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    DebugViewController *debugViewController = [[DebugViewController alloc] initWithNibName:nil bundle:nil];
+//    DebugViewController *debugViewController = [[DebugViewController alloc] initWithNibName:nil bundle:nil];
     
-    self.window.rootViewController = debugViewController;
+    OTDashboardViewController *dashboardViewController = [[OTDashboardViewController alloc] initWithNibName:nil bundle:nil];
     
-    [debugViewController release];
+    self.window.rootViewController = dashboardViewController;
+    
+    [dashboardViewController release];
     
     return YES;
 }
