@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C91DCD4E14D1DB7A00AD922D /* OTDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD4D14D1DB7A00AD922D /* OTDashboardViewController.m */; };
 		C91DCD5414D1DFDA00AD922D /* OTSpeedoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD5314D1DFDA00AD922D /* OTSpeedoViewController.m */; };
+		C91DCD5714D1E17800AD922D /* OTGPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD5614D1E17800AD922D /* OTGPSViewController.m */; };
+		C91DCD5914D1E1A600AD922D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91DCD5814D1E1A600AD922D /* MapKit.framework */; };
 		C9D85DFA14C6287C007DCB34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DF914C6287C007DCB34 /* UIKit.framework */; };
 		C9D85DFC14C6287C007DCB34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFB14C6287C007DCB34 /* Foundation.framework */; };
 		C9D85DFE14C6287C007DCB34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFD14C6287C007DCB34 /* CoreGraphics.framework */; };
@@ -25,6 +27,9 @@
 		C91DCD4D14D1DB7A00AD922D /* OTDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTDashboardViewController.m; sourceTree = "<group>"; };
 		C91DCD5214D1DFDA00AD922D /* OTSpeedoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTSpeedoViewController.h; sourceTree = "<group>"; };
 		C91DCD5314D1DFDA00AD922D /* OTSpeedoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSpeedoViewController.m; sourceTree = "<group>"; };
+		C91DCD5514D1E17800AD922D /* OTGPSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTGPSViewController.h; sourceTree = "<group>"; };
+		C91DCD5614D1E17800AD922D /* OTGPSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTGPSViewController.m; sourceTree = "<group>"; };
+		C91DCD5814D1E1A600AD922D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C9D85DF514C6287C007DCB34 /* OpenTurpo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenTurpo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D85DF914C6287C007DCB34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9D85DFB14C6287C007DCB34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91DCD5914D1E1A600AD922D /* MapKit.framework in Frameworks */,
 				C9D85DFA14C6287C007DCB34 /* UIKit.framework in Frameworks */,
 				C9D85DFC14C6287C007DCB34 /* Foundation.framework in Frameworks */,
 				C9D85DFE14C6287C007DCB34 /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +84,7 @@
 		C9D85DF814C6287C007DCB34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C91DCD5814D1E1A600AD922D /* MapKit.framework */,
 				C9D85DF914C6287C007DCB34 /* UIKit.framework */,
 				C9D85DFB14C6287C007DCB34 /* Foundation.framework */,
 				C9D85DFD14C6287C007DCB34 /* CoreGraphics.framework */,
@@ -119,6 +126,8 @@
 				C91DCD4D14D1DB7A00AD922D /* OTDashboardViewController.m */,
 				C91DCD5214D1DFDA00AD922D /* OTSpeedoViewController.h */,
 				C91DCD5314D1DFDA00AD922D /* OTSpeedoViewController.m */,
+				C91DCD5514D1E17800AD922D /* OTGPSViewController.h */,
+				C91DCD5614D1E17800AD922D /* OTGPSViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 				C9D85E1D14C639E5007DCB34 /* DebugViewController.m in Sources */,
 				C91DCD4E14D1DB7A00AD922D /* OTDashboardViewController.m in Sources */,
 				C91DCD5414D1DFDA00AD922D /* OTSpeedoViewController.m in Sources */,
+				C91DCD5714D1E17800AD922D /* OTGPSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

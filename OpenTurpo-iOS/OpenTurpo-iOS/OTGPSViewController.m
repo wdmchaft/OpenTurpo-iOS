@@ -1,17 +1,16 @@
 //
-//  OTDashboardViewController.m
+//  OTGPSViewController.m
 //  OpenTurpo-iOS
 //
 //  Created by Tim Uusitalo on 1/26/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "OTDashboardViewController.h"
-#import "DebugViewController.h"
-#import "OTSpeedoViewController.h"
 #import "OTGPSViewController.h"
 
-@implementation OTDashboardViewController
+#import <MapKit/MapKit.h>
+
+@implementation OTGPSViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,16 +44,14 @@
 {
     [super viewDidLoad];
     
-    DebugViewController *debugViewController = [[DebugViewController alloc] initWithNibName:nil bundle:nil];
-    OTSpeedoViewController *speedoViewController = [[OTSpeedoViewController alloc] initWithNibName:nil bundle:nil];
-    OTGPSViewController *gpsViewController = [[OTGPSViewController alloc] initWithNibName:nil bundle:nil];
+    self.title = @"GPS";
     
-    [self setViewControllers:[NSArray arrayWithObjects:speedoViewController,gpsViewController ,debugViewController, nil]];
-    [debugViewController release];
-    [speedoViewController release];
+    MKMapView *mapview = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 1024, 768)];
     
+    [mapview setShowsUserLocation:YES];
+    [self.view addSubview:mapview];
+    [mapview release];
 }
-
 
 - (void)viewDidUnload
 {
