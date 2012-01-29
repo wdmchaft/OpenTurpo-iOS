@@ -52,7 +52,7 @@
     [self setViewControllers:[NSArray arrayWithObjects:speedoViewController,gpsViewController ,debugViewController, nil]];
     [debugViewController release];
     [speedoViewController release];
-    
+    [gpsViewController release];
 }
 
 

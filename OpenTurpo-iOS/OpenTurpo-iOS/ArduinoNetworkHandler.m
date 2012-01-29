@@ -42,7 +42,7 @@
 
 - (void) dealloc
 {
-    [self.arduinoConnection release];
+    [_arduinoConnection release];
     [super dealloc];
 }
 
