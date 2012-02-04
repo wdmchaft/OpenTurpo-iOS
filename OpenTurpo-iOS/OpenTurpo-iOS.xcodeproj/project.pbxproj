@@ -15,13 +15,13 @@
 		C91DCD6314D4C3DA00AD922D /* example.c in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD6214D4C3DA00AD922D /* example.c */; };
 		C91DCD6614D4C63A00AD922D /* example.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD6514D4C63A00AD922D /* example.m */; };
 		C91DCD6814D4C68200AD922D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91DCD6714D4C68200AD922D /* CoreFoundation.framework */; };
+		C95760C514DC6ADF00038D9C /* OTProgressCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = C95760C414DC6ADF00038D9C /* OTProgressCircle.m */; };
 		C9D85DFA14C6287C007DCB34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DF914C6287C007DCB34 /* UIKit.framework */; };
 		C9D85DFC14C6287C007DCB34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFB14C6287C007DCB34 /* Foundation.framework */; };
 		C9D85DFE14C6287C007DCB34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFD14C6287C007DCB34 /* CoreGraphics.framework */; };
 		C9D85E0414C6287C007DCB34 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9D85E0214C6287C007DCB34 /* InfoPlist.strings */; };
 		C9D85E0614C6287C007DCB34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D85E0514C6287C007DCB34 /* main.m */; };
 		C9D85E0A14C6287C007DCB34 /* OTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D85E0914C6287C007DCB34 /* OTAppDelegate.m */; };
-		C9D85E1A14C6334F007DCB34 /* ArduinoNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D85E1914C6334F007DCB34 /* ArduinoNetworkHandler.m */; };
 		C9D85E1D14C639E5007DCB34 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D85E1C14C639E5007DCB34 /* DebugViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +39,8 @@
 		C91DCD6414D4C63A00AD922D /* example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = example.h; sourceTree = "<group>"; };
 		C91DCD6514D4C63A00AD922D /* example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = example.m; sourceTree = "<group>"; };
 		C91DCD6714D4C68200AD922D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		C95760C314DC6ADF00038D9C /* OTProgressCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTProgressCircle.h; sourceTree = "<group>"; };
+		C95760C414DC6ADF00038D9C /* OTProgressCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTProgressCircle.m; sourceTree = "<group>"; };
 		C9D85DF514C6287C007DCB34 /* OpenTurpo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenTurpo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D85DF914C6287C007DCB34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9D85DFB14C6287C007DCB34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +52,6 @@
 		C9D85E0814C6287C007DCB34 /* OTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTAppDelegate.h; sourceTree = "<group>"; };
 		C9D85E0914C6287C007DCB34 /* OTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTAppDelegate.m; sourceTree = "<group>"; };
 		C9D85E1414C628E4007DCB34 /* ArduinoNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArduinoNetworkModel.h; sourceTree = "<group>"; };
-		C9D85E1814C6334F007DCB34 /* ArduinoNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArduinoNetworkHandler.h; sourceTree = "<group>"; };
-		C9D85E1914C6334F007DCB34 /* ArduinoNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArduinoNetworkHandler.m; sourceTree = "<group>"; };
 		C9D85E1B14C639E5007DCB34 /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
 		C9D85E1C14C639E5007DCB34 /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +144,8 @@
 		C9D85E1114C628B8007DCB34 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C95760C314DC6ADF00038D9C /* OTProgressCircle.h */,
+				C95760C414DC6ADF00038D9C /* OTProgressCircle.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -159,8 +161,6 @@
 		C9D85E1314C628C6007DCB34 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C9D85E1814C6334F007DCB34 /* ArduinoNetworkHandler.h */,
-				C9D85E1914C6334F007DCB34 /* ArduinoNetworkHandler.m */,
 				C91DCD5E14D4992700AD922D /* OTSocket.h */,
 				C91DCD5F14D4992700AD922D /* OTSocket.m */,
 				C91DCD6214D4C3DA00AD922D /* example.c */,
@@ -233,7 +233,6 @@
 			files = (
 				C9D85E0614C6287C007DCB34 /* main.m in Sources */,
 				C9D85E0A14C6287C007DCB34 /* OTAppDelegate.m in Sources */,
-				C9D85E1A14C6334F007DCB34 /* ArduinoNetworkHandler.m in Sources */,
 				C9D85E1D14C639E5007DCB34 /* DebugViewController.m in Sources */,
 				C91DCD4E14D1DB7A00AD922D /* OTDashboardViewController.m in Sources */,
 				C91DCD5414D1DFDA00AD922D /* OTSpeedoViewController.m in Sources */,
@@ -241,6 +240,7 @@
 				C91DCD6014D4992700AD922D /* OTSocket.m in Sources */,
 				C91DCD6314D4C3DA00AD922D /* example.c in Sources */,
 				C91DCD6614D4C63A00AD922D /* example.m in Sources */,
+				C95760C514DC6ADF00038D9C /* OTProgressCircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

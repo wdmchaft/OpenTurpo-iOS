@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C91DCD9A14D5944900AD922D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91DCD9914D5944900AD922D /* Cocoa.framework */; };
+		C91DCDA414D5944900AD922D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C91DCDA214D5944900AD922D /* InfoPlist.strings */; };
+		C91DCDA614D5944900AD922D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCDA514D5944900AD922D /* main.m */; };
+		C91DCDAA14D5944900AD922D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C91DCDA814D5944900AD922D /* Credits.rtf */; };
+		C91DCDAD14D5944900AD922D /* OTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCDAC14D5944900AD922D /* OTAppDelegate.m */; };
+		C91DCDB014D5944A00AD922D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91DCDAE14D5944A00AD922D /* MainMenu.xib */; };
+		C91DCDB814D5947200AD922D /* OTSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCDB714D5947200AD922D /* OTSocket.m */; };
+		C91DCDBA14D5948600AD922D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91DCDB914D5948600AD922D /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C91DCD9514D5944900AD922D /* OpenTurpo-Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenTurpo-Server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91DCD9914D5944900AD922D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C91DCD9C14D5944900AD922D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C91DCD9D14D5944900AD922D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C91DCD9E14D5944900AD922D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C91DCDA114D5944900AD922D /* OpenTurpo-Server-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenTurpo-Server-Info.plist"; sourceTree = "<group>"; };
+		C91DCDA314D5944900AD922D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C91DCDA514D5944900AD922D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C91DCDA714D5944900AD922D /* OpenTurpo-Server-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenTurpo-Server-Prefix.pch"; sourceTree = "<group>"; };
+		C91DCDA914D5944900AD922D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C91DCDAB14D5944900AD922D /* OTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTAppDelegate.h; sourceTree = "<group>"; };
+		C91DCDAC14D5944900AD922D /* OTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTAppDelegate.m; sourceTree = "<group>"; };
+		C91DCDAF14D5944A00AD922D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C91DCDB614D5947200AD922D /* OTSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OTSocket.h; path = "Projects/OpenTurpo/OpenTurpo-iOS/OpenTurpo-iOS/OpenTurpo-iOS/OTSocket.h"; sourceTree = DEVELOPER_DIR; };
+		C91DCDB714D5947200AD922D /* OTSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OTSocket.m; path = "Projects/OpenTurpo/OpenTurpo-iOS/OpenTurpo-iOS/OpenTurpo-iOS/OTSocket.m"; sourceTree = DEVELOPER_DIR; };
+		C91DCDB914D5948600AD922D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C91DCD9214D5944900AD922D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91DCDBA14D5948600AD922D /* CoreFoundation.framework in Frameworks */,
+				C91DCD9A14D5944900AD922D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C91DCD8A14D5944900AD922D = {
+			isa = PBXGroup;
+			children = (
+				C91DCD9F14D5944900AD922D /* OpenTurpo-Server */,
+				C91DCD9814D5944900AD922D /* Frameworks */,
+				C91DCD9614D5944900AD922D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C91DCD9614D5944900AD922D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C91DCD9514D5944900AD922D /* OpenTurpo-Server.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C91DCD9814D5944900AD922D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C91DCDB914D5948600AD922D /* CoreFoundation.framework */,
+				C91DCD9914D5944900AD922D /* Cocoa.framework */,
+				C91DCD9B14D5944900AD922D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C91DCD9B14D5944900AD922D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C91DCD9C14D5944900AD922D /* AppKit.framework */,
+				C91DCD9D14D5944900AD922D /* CoreData.framework */,
+				C91DCD9E14D5944900AD922D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C91DCD9F14D5944900AD922D /* OpenTurpo-Server */ = {
+			isa = PBXGroup;
+			children = (
+				C91DCDB614D5947200AD922D /* OTSocket.h */,
+				C91DCDB714D5947200AD922D /* OTSocket.m */,
+				C91DCDAB14D5944900AD922D /* OTAppDelegate.h */,
+				C91DCDAC14D5944900AD922D /* OTAppDelegate.m */,
+				C91DCDAE14D5944A00AD922D /* MainMenu.xib */,
+				C91DCDA014D5944900AD922D /* Supporting Files */,
+			);
+			path = "OpenTurpo-Server";
+			sourceTree = "<group>";
+		};
+		C91DCDA014D5944900AD922D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C91DCDA114D5944900AD922D /* OpenTurpo-Server-Info.plist */,
+				C91DCDA214D5944900AD922D /* InfoPlist.strings */,
+				C91DCDA514D5944900AD922D /* main.m */,
+				C91DCDA714D5944900AD922D /* OpenTurpo-Server-Prefix.pch */,
+				C91DCDA814D5944900AD922D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C91DCD9414D5944900AD922D /* OpenTurpo-Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C91DCDB314D5944A00AD922D /* Build configuration list for PBXNativeTarget "OpenTurpo-Server" */;
+			buildPhases = (
+				C91DCD9114D5944900AD922D /* Sources */,
+				C91DCD9214D5944900AD922D /* Frameworks */,
+				C91DCD9314D5944900AD922D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OpenTurpo-Server";
+			productName = "OpenTurpo-Server";
+			productReference = C91DCD9514D5944900AD922D /* OpenTurpo-Server.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C91DCD8C14D5944900AD922D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C91DCD8F14D5944900AD922D /* Build configuration list for PBXProject "OpenTurpo-Server" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C91DCD8A14D5944900AD922D;
+			productRefGroup = C91DCD9614D5944900AD922D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C91DCD9414D5944900AD922D /* OpenTurpo-Server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C91DCD9314D5944900AD922D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91DCDA414D5944900AD922D /* InfoPlist.strings in Resources */,
+				C91DCDAA14D5944900AD922D /* Credits.rtf in Resources */,
+				C91DCDB014D5944A00AD922D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C91DCD9114D5944900AD922D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C91DCDA614D5944900AD922D /* main.m in Sources */,
+				C91DCDAD14D5944900AD922D /* OTAppDelegate.m in Sources */,
+				C91DCDB814D5947200AD922D /* OTSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C91DCDA214D5944900AD922D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C91DCDA314D5944900AD922D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C91DCDA814D5944900AD922D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C91DCDA914D5944900AD922D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C91DCDAE14D5944A00AD922D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C91DCDAF14D5944A00AD922D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C91DCDB114D5944A00AD922D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C91DCDB214D5944A00AD922D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C91DCDB414D5944A00AD922D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenTurpo-Server/OpenTurpo-Server-Prefix.pch";
+				INFOPLIST_FILE = "OpenTurpo-Server/OpenTurpo-Server-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C91DCDB514D5944A00AD922D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenTurpo-Server/OpenTurpo-Server-Prefix.pch";
+				INFOPLIST_FILE = "OpenTurpo-Server/OpenTurpo-Server-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C91DCD8F14D5944900AD922D /* Build configuration list for PBXProject "OpenTurpo-Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C91DCDB114D5944A00AD922D /* Debug */,
+				C91DCDB214D5944A00AD922D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C91DCDB314D5944A00AD922D /* Build configuration list for PBXNativeTarget "OpenTurpo-Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C91DCDB414D5944A00AD922D /* Debug */,
+				C91DCDB514D5944A00AD922D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C91DCD8C14D5944900AD922D /* Project object */;
+}

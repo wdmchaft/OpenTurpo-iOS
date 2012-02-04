@@ -15,8 +15,8 @@
 // private
 @interface OTSocket ()
 {
-    CFSocketRef udpSocket;
-    CFSocketContext udpSocketContext;
+    CFSocketRef _udpSocket;
+    CFSocketContext _udpSocketContext;
 }
 
 - (void) udpSocketCallback;
@@ -47,22 +47,39 @@
     [super dealloc];
 }
 
-- (void) open
+- (void) openAndListen:(BOOL)listen;
 {
-    NSLog(@"Open socket not yet implemented.");
+    NSLog(@"Under implementation.");
     
     // define socket context
-    memset(&udpSocketContext, 0, sizeof(udpSocketContext));
-    udpSocketContext.version = 0;
-    udpSocketContext.info = "OpenTurpo UDP socket context";
+    memset(&_udpSocketContext, 0, sizeof(_udpSocketContext));
+    _udpSocketContext.version = 0;
+    _udpSocketContext.info = "OpenTurpo UDP socket context";
     
     // create udp socket
-    udpSocket = CFSocketCreate(kCFAllocatorDefault, PF_INET, SOCK_STREAM, IPPROTO_UDP, kCFSocketAcceptCallBack, (CFSocketCallBack)&self.udpSocketCallback, &udpSocketContext);
+    _udpSocket = CFSocketCreate(kCFAllocatorDefault, PF_INET, SOCK_DGRAM, IPPROTO_UDP, kCFSocketAcceptCallBack, (CFSocketCallBack)&self.udpSocketCallback, &_udpSocketContext);
     
-    if (udpSocket == NULL) {
+    if (_udpSocket == NULL) {
         NSLog(@"Failed creating socket");
         return;
     }
+    
+    if (listen) {
+        [self listen];
+    } else {
+        // Re-use local address we want to listen on
+        int yes = 1;
+        setsockopt(CFSocketGetNative(_udpSocket), SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes));
+        
+        struct sockaddr_in address;
+        memset(&address, 0, sizeof(address));
+        address.sin_len = sizeof(address);
+        address.sin_family = AF_INET;
+        address.sin_port = [_portNumber intValue];
+        address.sin_addr.s_addr = 0;//([_address UTF8String], [_address length]);
+
+    }
+    
 }
 
 - (void) close
@@ -74,7 +91,7 @@
 {
     // Re-use local address we want to listen on
     int yes = 1;
-    setsockopt(CFSocketGetNative(udpSocket), SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes));
+    setsockopt(CFSocketGetNative(_udpSocket), SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes));
     
     struct sockaddr_in address;
     memset(&address, 0, sizeof(address));

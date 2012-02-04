@@ -7,6 +7,15 @@
 //
 
 #import "OTSpeedoViewController.h"
+#import "OTProgressCircle.h"
+
+@interface OTSpeedoViewController ()
+{
+    OTProgressCircle *_circleProgressBar;
+}
+- (void)circleSliderAction:(id)sender;
+
+@end
 
 @implementation OTSpeedoViewController
 
@@ -45,6 +54,22 @@
     self.title = @"Speedo";
     
     [self.view setBackgroundColor:[UIColor blackColor]];
+    
+    OTProgressCircle *circle = [[OTProgressCircle alloc] initWithFrame:CGRectMake(250, 75, 500, 500)];
+    [self.view addSubview:circle];
+    circle.strokeColor = [UIColor cyanColor];
+    _circleProgressBar = circle;
+    circle.startAngle = 160;
+    circle.endAngle = 360;
+
+    [circle release];
+    
+    
+    UISlider *circleSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 50, 300, 30)];
+    
+    [circleSlider addTarget:self action:(@selector(circleSliderAction:)) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:circleSlider];
+    [circleSlider release];
 }
 
 
@@ -59,6 +84,14 @@
 {
     // Return YES for supported orientations
 	return YES;
+}
+
+#pragma mark - Button actions
+- (void)circleSliderAction:(id)sender
+{
+    UISlider *slider = (UISlider*)sender;
+    
+    [_circleProgressBar setProgress:slider.value];
 }
 
 @end

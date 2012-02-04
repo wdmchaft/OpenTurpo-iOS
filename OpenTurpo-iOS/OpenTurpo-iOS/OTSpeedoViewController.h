@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface OTSpeedoViewController : UIViewController
+{
+    
+}
 
 @end

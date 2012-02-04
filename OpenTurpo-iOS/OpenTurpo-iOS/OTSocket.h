@@ -22,7 +22,7 @@
 
 - (void) dealloc;
 
-- (void) open;
+- (void) openAndListen:(BOOL)listen;
 - (void) close;
 - (void) listen;
 
