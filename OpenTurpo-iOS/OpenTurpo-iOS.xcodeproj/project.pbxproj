@@ -16,6 +16,7 @@
 		C91DCD6614D4C63A00AD922D /* example.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD6514D4C63A00AD922D /* example.m */; };
 		C91DCD6814D4C68200AD922D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91DCD6714D4C68200AD922D /* CoreFoundation.framework */; };
 		C95760C514DC6ADF00038D9C /* OTProgressCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = C95760C414DC6ADF00038D9C /* OTProgressCircle.m */; };
+		C99DA49F14DD7C4500D9D3C9 /* OTMath.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DA49E14DD7C4500D9D3C9 /* OTMath.m */; };
 		C9D85DFA14C6287C007DCB34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DF914C6287C007DCB34 /* UIKit.framework */; };
 		C9D85DFC14C6287C007DCB34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFB14C6287C007DCB34 /* Foundation.framework */; };
 		C9D85DFE14C6287C007DCB34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFD14C6287C007DCB34 /* CoreGraphics.framework */; };
@@ -41,6 +42,8 @@
 		C91DCD6714D4C68200AD922D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		C95760C314DC6ADF00038D9C /* OTProgressCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTProgressCircle.h; sourceTree = "<group>"; };
 		C95760C414DC6ADF00038D9C /* OTProgressCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTProgressCircle.m; sourceTree = "<group>"; };
+		C99DA49D14DD7C4500D9D3C9 /* OTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMath.h; sourceTree = "<group>"; };
+		C99DA49E14DD7C4500D9D3C9 /* OTMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMath.m; sourceTree = "<group>"; };
 		C9D85DF514C6287C007DCB34 /* OpenTurpo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenTurpo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D85DF914C6287C007DCB34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9D85DFB14C6287C007DCB34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C99DA49B14DD7C3000D9D3C9 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				C99DA49D14DD7C4500D9D3C9 /* OTMath.h */,
+				C99DA49E14DD7C4500D9D3C9 /* OTMath.m */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
 		C9D85DEA14C6287C007DCB34 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 		C9D85DFF14C6287C007DCB34 /* OpenTurpo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C99DA49B14DD7C3000D9D3C9 /* Math */,
 				C9D85E1314C628C6007DCB34 /* Network */,
 				C9D85E1214C628BA007DCB34 /* Models */,
 				C9D85E1114C628B8007DCB34 /* Views */,
@@ -241,6 +254,7 @@
 				C91DCD6314D4C3DA00AD922D /* example.c in Sources */,
 				C91DCD6614D4C63A00AD922D /* example.m in Sources */,
 				C95760C514DC6ADF00038D9C /* OTProgressCircle.m in Sources */,
+				C99DA49F14DD7C4500D9D3C9 /* OTMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +292,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -297,6 +312,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;

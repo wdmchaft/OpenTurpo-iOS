@@ -55,15 +55,14 @@
     
     [self.view setBackgroundColor:[UIColor blackColor]];
     
-    OTProgressCircle *circle = [[OTProgressCircle alloc] initWithFrame:CGRectMake(250, 75, 500, 500)];
+    OTProgressCircle *circle = [[OTProgressCircle alloc] initWithFrame:CGRectMake(250, 25, 500, 500)];
     [self.view addSubview:circle];
-    circle.strokeColor = [UIColor cyanColor];
+    circle.strokeColor = [UIColor whiteColor];
     _circleProgressBar = circle;
     circle.startAngle = 160;
     circle.endAngle = 360;
 
     [circle release];
-    
     
     UISlider *circleSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 50, 300, 30)];
     

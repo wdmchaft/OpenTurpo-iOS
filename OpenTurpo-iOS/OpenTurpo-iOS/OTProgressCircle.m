@@ -7,13 +7,13 @@
 //
 
 #import "OTProgressCircle.h"
+#import "OTMath.h"
 
 @interface OTProgressCircle () 
 {
     CGFloat _clockwise;
 }
-- (CGFloat)degreeToRadian:(CGFloat) degree;
-- (CGFloat)lerpFirstValue:(CGFloat)a withSecondValue:(CGFloat)b useTime:(CGFloat)time;
+
 
 @end
 @implementation OTProgressCircle
@@ -35,7 +35,6 @@
         self.type = OTProgressCircleTypeTachoMeter;
         _clockwise = 1;
         self.clearsContextBeforeDrawing = YES;
-//        self.valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(_lineWidth + _lineWidth*0.1f, rect.size.height * 0.5f * , rect.size.width-_lineWidth*2, rect.size.height*0.167)];
         
     }
     return self;
@@ -61,7 +60,6 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-
     CGPoint centerPosition = CGPointMake(rect.origin.x + rect.size.width*0.5f, rect.origin.y + rect.size.height * 0.5f);
     CGFloat outerRadius = ((rect.size.width >= rect.size.height)? (rect.size.width -_lineWidth) * 0.5f : (rect.size.height - _lineWidth) * 0.5f);
 
@@ -78,28 +76,18 @@
     CGContextSetStrokeColorWithColor(context, self.strokeColor.CGColor);    
     
     // draw the arc
-    CGContextAddArc(context, centerPosition.x, centerPosition.y, outerRadius, [self degreeToRadian:[self lerpFirstValue:self.startAngle withSecondValue:self.endAngle useTime:self.progress]], [self degreeToRadian:self.endAngle], _clockwise);
+    CGContextAddArc(context, centerPosition.x, centerPosition.y, outerRadius, [OTMath degreeToRadian:[OTMath lerpFirstValue:self.startAngle withSecondValue:self.endAngle useTime:self.progress]], [OTMath degreeToRadian:self.endAngle], _clockwise);
     
     CGContextStrokePath(context);
 
+    // draw the cover up arc
     CGContextSetLineWidth(context, _lineWidth + 2);
     CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
-    CGContextAddArc(context, centerPosition.x, centerPosition.y, outerRadius,[self degreeToRadian:self.startAngle], [self degreeToRadian:[self lerpFirstValue:self.startAngle withSecondValue:self.endAngle useTime:self.progress]], _clockwise);
+    CGContextAddArc(context, centerPosition.x, centerPosition.y, outerRadius,[OTMath degreeToRadian:self.startAngle], [OTMath degreeToRadian:[OTMath lerpFirstValue:self.startAngle withSecondValue:self.endAngle useTime:self.progress]], _clockwise);
 
     
     CGContextStrokePath(context);
     
 }
-
-- (CGFloat)degreeToRadian:(CGFloat) degree;
-{
-    return degree * (M_PI / 180);
-}
-
-- (CGFloat)lerpFirstValue:(CGFloat)a withSecondValue:(CGFloat)b useTime:(CGFloat)time
-{
-    return ((1-time)*a) + (time*b);
-}
-
 
 @end
