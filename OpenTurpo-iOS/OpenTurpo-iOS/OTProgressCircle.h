@@ -19,6 +19,7 @@ typedef enum {
     CGFloat _lineWidth;
     CGFloat _progress;
     UIColor *_strokeColor;
+    UIColor *_warningColor;
     UILabel *_valueLabel;
     OTProgressCircleType _type;
 }
@@ -28,6 +29,7 @@ typedef enum {
 @property (nonatomic, assign) CGFloat endAngle;
 @property (nonatomic, assign) CGFloat progress;
 @property (nonatomic, retain) UIColor *strokeColor;
+@property (nonatomic, retain) UIColor *warningColor;
 @property (nonatomic, retain) UILabel *valueLabel;
 @property (nonatomic, assign) OTProgressCircleType type;
 

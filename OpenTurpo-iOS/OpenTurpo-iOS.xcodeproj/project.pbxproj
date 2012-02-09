@@ -15,6 +15,7 @@
 		C91DCD6314D4C3DA00AD922D /* example.c in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD6214D4C3DA00AD922D /* example.c */; };
 		C91DCD6614D4C63A00AD922D /* example.m in Sources */ = {isa = PBXBuildFile; fileRef = C91DCD6514D4C63A00AD922D /* example.m */; };
 		C91DCD6814D4C68200AD922D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91DCD6714D4C68200AD922D /* CoreFoundation.framework */; };
+		C91F56E814E4722F008A8B8B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91F56E714E4722F008A8B8B /* CoreImage.framework */; };
 		C95760C514DC6ADF00038D9C /* OTProgressCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = C95760C414DC6ADF00038D9C /* OTProgressCircle.m */; };
 		C99DA49F14DD7C4500D9D3C9 /* OTMath.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DA49E14DD7C4500D9D3C9 /* OTMath.m */; };
 		C9D85DFA14C6287C007DCB34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DF914C6287C007DCB34 /* UIKit.framework */; };
@@ -40,6 +41,7 @@
 		C91DCD6414D4C63A00AD922D /* example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = example.h; sourceTree = "<group>"; };
 		C91DCD6514D4C63A00AD922D /* example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = example.m; sourceTree = "<group>"; };
 		C91DCD6714D4C68200AD922D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		C91F56E714E4722F008A8B8B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		C95760C314DC6ADF00038D9C /* OTProgressCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTProgressCircle.h; sourceTree = "<group>"; };
 		C95760C414DC6ADF00038D9C /* OTProgressCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTProgressCircle.m; sourceTree = "<group>"; };
 		C99DA49D14DD7C4500D9D3C9 /* OTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMath.h; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91F56E814E4722F008A8B8B /* CoreImage.framework in Frameworks */,
 				C91DCD6814D4C68200AD922D /* CoreFoundation.framework in Frameworks */,
 				C91DCD5914D1E1A600AD922D /* MapKit.framework in Frameworks */,
 				C9D85DFA14C6287C007DCB34 /* UIKit.framework in Frameworks */,
@@ -104,6 +107,7 @@
 		C9D85DF814C6287C007DCB34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C91F56E714E4722F008A8B8B /* CoreImage.framework */,
 				C91DCD6714D4C68200AD922D /* CoreFoundation.framework */,
 				C91DCD5814D1E1A600AD922D /* MapKit.framework */,
 				C9D85DF914C6287C007DCB34 /* UIKit.framework */,

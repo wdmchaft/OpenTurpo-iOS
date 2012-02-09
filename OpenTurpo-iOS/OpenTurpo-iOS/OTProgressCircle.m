@@ -21,6 +21,7 @@
 @synthesize lineWidth = _lineWidth;
 @synthesize progress = _progress;
 @synthesize strokeColor = _strokeColor;
+@synthesize warningColor = _warningColor;
 @synthesize valueLabel = _valueLabel;
 @synthesize type = _type;
 @synthesize startAngle = _startAngle;
@@ -35,7 +36,7 @@
         self.type = OTProgressCircleTypeTachoMeter;
         _clockwise = 1;
         self.clearsContextBeforeDrawing = YES;
-        
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -43,6 +44,7 @@
 - (void)dealloc
 {
     self.strokeColor = nil;
+    self.warningColor = nil;
     self.valueLabel = nil;
     
     [super dealloc];
@@ -60,6 +62,10 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    if (self.progress == 1.0) {
+        return;
+    }
+    
     CGPoint centerPosition = CGPointMake(rect.origin.x + rect.size.width*0.5f, rect.origin.y + rect.size.height * 0.5f);
     CGFloat outerRadius = ((rect.size.width >= rect.size.height)? (rect.size.width -_lineWidth) * 0.5f : (rect.size.height - _lineWidth) * 0.5f);
 
@@ -71,9 +77,21 @@
         return;
     }
     
+    CGFloat r, g, b;
+    
+    
+    CIColor *strokeColor = [CIColor colorWithCGColor:self.strokeColor.CGColor];
+    CIColor *warningColor = [CIColor colorWithCGColor:self.warningColor.CGColor];
+    
+    r = [OTMath lerpFirstValue:strokeColor.red withSecondValue:warningColor.red useTime:self.progress];
+    g = [OTMath lerpFirstValue:strokeColor.green withSecondValue:warningColor.green useTime:self.progress];
+    b = [OTMath lerpFirstValue:strokeColor.blue withSecondValue:warningColor.blue useTime:self.progress];
+    
+    UIColor *finalColor = [UIColor colorWithRed:r green:g blue:b alpha:1.0f];
+    
     // set properties for drawing the arc
     CGContextSetLineWidth(context, _lineWidth);
-    CGContextSetStrokeColorWithColor(context, self.strokeColor.CGColor);    
+    CGContextSetStrokeColorWithColor(context, finalColor.CGColor);    
     
     // draw the arc
     CGContextAddArc(context, centerPosition.x, centerPosition.y, outerRadius, [OTMath degreeToRadian:[OTMath lerpFirstValue:self.startAngle withSecondValue:self.endAngle useTime:self.progress]], [OTMath degreeToRadian:self.endAngle], _clockwise);

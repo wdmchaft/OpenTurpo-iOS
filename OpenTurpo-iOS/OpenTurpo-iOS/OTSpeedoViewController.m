@@ -11,9 +11,13 @@
 
 @interface OTSpeedoViewController ()
 {
-    OTProgressCircle *_circleProgressBar;
+    OTProgressCircle *_speedoProgressBar;
+    OTProgressCircle *_tachoProgressBar;
+    OTProgressCircle *_turboProgressBar;
 }
-- (void)circleSliderAction:(id)sender;
+- (void)speedoSliderAction:(id)sender;
+- (void)tachoSliderAction:(id)sender;
+- (void)turboSliderAction:(id)sender;
 
 @end
 
@@ -55,20 +59,54 @@
     
     [self.view setBackgroundColor:[UIColor blackColor]];
     
-    OTProgressCircle *circle = [[OTProgressCircle alloc] initWithFrame:CGRectMake(250, 25, 500, 500)];
-    [self.view addSubview:circle];
-    circle.strokeColor = [UIColor whiteColor];
-    _circleProgressBar = circle;
-    circle.startAngle = 160;
-    circle.endAngle = 360;
-
-    [circle release];
+    OTProgressCircle *speedo = [[OTProgressCircle alloc] initWithFrame:CGRectMake(100, 25, 300, 300)];
+    [self.view addSubview:speedo];
+    speedo.strokeColor = [UIColor cyanColor];
+    speedo.warningColor = [UIColor redColor];
+    _speedoProgressBar = speedo;
+    speedo.startAngle = 100;
+    speedo.endAngle = 400;
+    speedo.lineWidth = 15.0f;
+    [speedo release];
     
-    UISlider *circleSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 50, 300, 30)];
+    OTProgressCircle *tacho = [[OTProgressCircle alloc] initWithFrame:CGRectMake(312, 25, 400, 400)];
+    [self.view addSubview:tacho];
+    tacho.strokeColor = [UIColor cyanColor];
+    tacho.warningColor = [UIColor redColor];
+    _tachoProgressBar = tacho;
+    tacho.startAngle = 160;
+    tacho.endAngle = 360;
     
-    [circleSlider addTarget:self action:(@selector(circleSliderAction:)) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:circleSlider];
-    [circleSlider release];
+    [tacho release];
+    
+    OTProgressCircle *turbo = [[OTProgressCircle alloc] initWithFrame:CGRectMake(712, 25, 200, 200)];
+    [self.view addSubview:turbo];
+    turbo.strokeColor = [UIColor cyanColor];
+    turbo.warningColor = [UIColor redColor];
+    _turboProgressBar = turbo;
+    turbo.startAngle = 225;
+    turbo.endAngle = 315;
+    turbo.lineWidth = 12.0f;
+    [turbo release];
+    
+    
+    UISlider *speedoSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 630, 300, 30)];
+    
+    [speedoSlider addTarget:self action:(@selector(speedoSliderAction:)) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:speedoSlider];
+    [speedoSlider release];
+    
+    UISlider *tachoSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 650, 300, 30)];
+    
+    [tachoSlider addTarget:self action:(@selector(tachoSliderAction:)) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:tachoSlider];
+    [tachoSlider release];
+    
+    UISlider *turboSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 670, 300, 30)];
+    
+    [turboSlider addTarget:self action:(@selector(turboSliderAction:)) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:turboSlider];
+    [turboSlider release];
 }
 
 
@@ -86,11 +124,25 @@
 }
 
 #pragma mark - Button actions
-- (void)circleSliderAction:(id)sender
+- (void)speedoSliderAction:(id)sender
 {
     UISlider *slider = (UISlider*)sender;
     
-    [_circleProgressBar setProgress:slider.value];
+    [_speedoProgressBar setProgress:slider.value];
+}
+
+- (void)tachoSliderAction:(id)sender
+{
+    UISlider *slider = (UISlider*)sender;
+    
+    [_tachoProgressBar setProgress:slider.value];
+}
+
+- (void)turboSliderAction:(id)sender
+{
+    UISlider *slider = (UISlider*)sender;
+    
+    [_turboProgressBar setProgress:slider.value];
 }
 
 @end
