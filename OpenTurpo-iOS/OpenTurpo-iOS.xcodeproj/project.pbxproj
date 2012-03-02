@@ -18,6 +18,7 @@
 		C91F56E814E4722F008A8B8B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91F56E714E4722F008A8B8B /* CoreImage.framework */; };
 		C95760C514DC6ADF00038D9C /* OTProgressCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = C95760C414DC6ADF00038D9C /* OTProgressCircle.m */; };
 		C99DA49F14DD7C4500D9D3C9 /* OTMath.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DA49E14DD7C4500D9D3C9 /* OTMath.m */; };
+		C9BF0C0515015D7B0012C546 /* OTCircularTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BF0C0415015D7B0012C546 /* OTCircularTextView.m */; };
 		C9D85DFA14C6287C007DCB34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DF914C6287C007DCB34 /* UIKit.framework */; };
 		C9D85DFC14C6287C007DCB34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFB14C6287C007DCB34 /* Foundation.framework */; };
 		C9D85DFE14C6287C007DCB34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D85DFD14C6287C007DCB34 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 		C95760C414DC6ADF00038D9C /* OTProgressCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTProgressCircle.m; sourceTree = "<group>"; };
 		C99DA49D14DD7C4500D9D3C9 /* OTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMath.h; sourceTree = "<group>"; };
 		C99DA49E14DD7C4500D9D3C9 /* OTMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMath.m; sourceTree = "<group>"; };
+		C9BF0C0315015D7B0012C546 /* OTCircularTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTCircularTextView.h; sourceTree = "<group>"; };
+		C9BF0C0415015D7B0012C546 /* OTCircularTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTCircularTextView.m; sourceTree = "<group>"; };
 		C9D85DF514C6287C007DCB34 /* OpenTurpo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenTurpo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D85DF914C6287C007DCB34 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9D85DFB14C6287C007DCB34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -163,6 +166,8 @@
 			children = (
 				C95760C314DC6ADF00038D9C /* OTProgressCircle.h */,
 				C95760C414DC6ADF00038D9C /* OTProgressCircle.m */,
+				C9BF0C0315015D7B0012C546 /* OTCircularTextView.h */,
+				C9BF0C0415015D7B0012C546 /* OTCircularTextView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				C91DCD6614D4C63A00AD922D /* example.m in Sources */,
 				C95760C514DC6ADF00038D9C /* OTProgressCircle.m in Sources */,
 				C99DA49F14DD7C4500D9D3C9 /* OTMath.m in Sources */,
+				C9BF0C0515015D7B0012C546 /* OTCircularTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

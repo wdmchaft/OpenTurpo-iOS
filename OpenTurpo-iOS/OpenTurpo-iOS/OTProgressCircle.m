@@ -52,6 +52,9 @@
 
 - (void)setProgress:(CGFloat)progress
 {
+    if (progress == 1.0f) {
+        progress = 0.98f;
+    }
     _progress = progress;
     NSLog(@"Progress is being set to %f", _progress);
     // since we have changed the value of the arc, we need to redraw it

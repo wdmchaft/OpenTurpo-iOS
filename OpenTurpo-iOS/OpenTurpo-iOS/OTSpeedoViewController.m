@@ -81,8 +81,8 @@
     
     OTProgressCircle *turbo = [[OTProgressCircle alloc] initWithFrame:CGRectMake(712, 25, 200, 200)];
     [self.view addSubview:turbo];
-    turbo.strokeColor = [UIColor cyanColor];
-    turbo.warningColor = [UIColor redColor];
+    turbo.strokeColor = [UIColor redColor];
+    turbo.warningColor = [UIColor greenColor];
     _turboProgressBar = turbo;
     turbo.startAngle = 225;
     turbo.endAngle = 315;

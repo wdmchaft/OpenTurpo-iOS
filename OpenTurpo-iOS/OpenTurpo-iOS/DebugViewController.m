@@ -78,15 +78,12 @@
     UIBarButtonItem *secondRightFlexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     		
     toolbar.items = [NSArray arrayWithObjects:leftFlexibleSpace, secondLeftFlexibleSpace, title, rightFlexibleSpace, secondRightFlexibleSpace, nil];
-
     
     [leftFlexibleSpace release];
     [secondLeftFlexibleSpace release];
     [title release];
     [rightFlexibleSpace release];
     [secondRightFlexibleSpace release];
-    
-    
     
     [self.view addSubview:toolbar];
     [toolbar release];
