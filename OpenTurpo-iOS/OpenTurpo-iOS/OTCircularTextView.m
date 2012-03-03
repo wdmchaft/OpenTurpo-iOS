@@ -20,6 +20,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self setRadius:10.0f];
     }
     return self;
 }
@@ -38,14 +39,20 @@
 - (void)drawRect:(CGRect)rect
 {
     // Draw a number of texts placed in _textArray in a circle.
-    
-    
+    [_textArray enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
+        NSLog(@"Logging cool stuff %@, %@", key, obj);
+    }];
 }
 
 - (void) addText: (NSString*) text withKeyAngle:(NSNumber *) angle
 {
     NSLog(@"addTextWithKeyAngle is not yet implemented...");
     
+}
+
+- (void) setRadius: (CGFloat) radius
+{
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, radius, radius);
 }
 
 @end

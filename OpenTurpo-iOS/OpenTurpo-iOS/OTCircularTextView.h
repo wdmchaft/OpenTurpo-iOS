@@ -22,7 +22,7 @@
 @property (nonatomic, assign) CGFloat startAngle;
 @property (nonatomic, assign) CGFloat endAngle;
 
-
 - (void) addText: (NSString*) text withKeyAngle:(NSNumber *) angle;
+- (void) setRadius: (CGFloat) radius;
 
 @end
