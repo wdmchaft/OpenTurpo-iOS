@@ -21,3 +21,5 @@ build/
 # Local settings
 server.plist
 
+# C++ object files
+*.o
